@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
+using UnityEngine;
 
 namespace MidtermExam.Prob01
 {
@@ -21,9 +23,22 @@ namespace MidtermExam.Prob01
         /// และคิวหลังเรียกยังเป็น ["a", "b", "e", "a"] เหมือนเดิม
         /// </remarks>
         public int AS01_CountVowels(Queue<string> alphabets)
-        {
-            // TODO: เขียนคำตอบแทนคำสั่ง throw exception ด้านล่าง
-            throw new NotImplementedException();
+        { 
+            Queue<string> queue = new Queue<string>();
+            queue = alphabets;
+            queue.Enqueue("a");
+            queue.Enqueue("e");
+            queue.Enqueue("i");
+            queue.Enqueue("o");
+            queue.Enqueue("u");
+
+            if (alphabets == null || alphabets.Count == 0)
+            {
+                return 0;
+            }   
+
+            return queue.Count;
         }
+        
     }
 }
